@@ -622,6 +622,25 @@ a {
   margin-bottom: 8px;
 }
 
+.footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.footer-links a,
+.footer-wechat {
+  font-size: 13px;
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--text-muted);
+}
+
 .footer-copy {
   font-size: 13px;
   color: var(--text-dim);
@@ -647,6 +666,14 @@ a {
 @media (max-width: 600px) {
   .header {
     padding: 14px 16px;
+  }
+
+  .header-actions .btn {
+    display: none;
+  }
+
+  .lang-switch {
+    flex-shrink: 0;
   }
 
   .hero {
