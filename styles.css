@@ -1,259 +1,729 @@
-var LANG_KEY = 'zimzamzum.site.locale';
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-var translations = {
-  en: {
-    'meta.title': 'zimzamzum — AI for Your Assignments',
-    'meta.description': 'zimzamzum automates your assignments and helps you never miss a deadline.',
-    'nav.features': 'Features',
-    'nav.how': 'How it works',
-    'nav.pricing': 'Pricing',
-    'nav.faq': 'FAQ',
-    'nav.download': 'Download',
-    'hero.pill': 'Works with Chaoxing, Yuketang & more →',
-    'hero.title': 'AI for your<br>university assignments',
-    'hero.sub': 'zimzamzum is the AI assistant that tracks your deadlines, completes your assignments, and submits them automatically on your educational platforms.',
-    'hero.downloadMac': 'Download for Mac',
-    'hero.downloadWin': 'Download for Windows',
-    'mockup.label1': 'You describe the task',
-    'mockup.label2': 'zimzamzum works for you',
-    'mockup.nav1': 'New Task',
-    'mockup.nav2': 'Automations',
-    'mockup.nav3': 'Schedule',
-    'mockup.nav4': 'Recent tasks',
-    'mockup.nav5': 'In progress…',
-    'mockup.title': 'Start a New Task',
-    'mockup.task': 'Automatically complete my Q&A on Yuketang before Friday',
-    'mockup.tag1': 'Background',
-    'mockup.tag2': 'Thinking',
-    'mockup.sug1': 'Track deadlines',
-    'mockup.sug2': 'Submit an assignment',
-    'mockup.status': 'Task running — Yuketang Q&A',
-    'mockup.log1': 'Connecting to Yuketang…',
-    'mockup.log2': 'Connected',
-    'mockup.log3': '12 questions analyzed',
-    'mockup.log4': 'Writing answers…',
-    'features.title': 'Everything you need',
-    'features.sub': 'A complete assistant for your student life.',
-    'features.f1.title': 'Deadline tracking',
-    'features.f1.desc': 'Never miss a due date again. zimzamzum monitors all your courses.',
-    'features.f2.title': 'Automations',
-    'features.f2.desc': 'Create reusable workflows for tasks you do every week.',
-    'features.f3.title': 'Education platforms',
-    'features.f3.desc': 'Chaoxing, Yuketang and more — connect your accounts in one click.',
-    'features.f4.title': 'Background mode',
-    'features.f4.desc': 'The AI works while you do something else. You stay in control.',
-    'features.f5.title': 'Thinking mode',
-    'features.f5.desc': 'For complex assignments, the AI takes time to analyze before acting.',
-    'features.f6.title': 'Scheduling',
-    'features.f6.desc': 'Schedule automations to run daily or weekly on autopilot.',
-    'pricing.title': 'Simple pricing',
-    'pricing.sub': '1-day free trial on every new account.',
-    'pricing.popular': 'Popular',
-    'pricing.free.name': 'Free',
-    'pricing.free.period': '1-day full trial',
-    'pricing.free.f1': 'Access to all features',
-    'pricing.free.f2': 'No credit card required',
-    'pricing.free.f3': 'Memory included with slower responses & task execution',
-    'pricing.free.cta': 'Get started',
-    'pricing.starter.period': 'per month',
-    'pricing.starter.f1': 'Unlimited access',
-    'pricing.starter.f2': 'Assignments completed & submitted',
-    'pricing.starter.f3': 'Priority support',
-    'pricing.starter.f4': 'Access to Memory with fast responses & super-fast task execution',
-    'pricing.starter.cta': 'Choose Starter',
-    'pricing.semester.name': 'Semester',
-    'pricing.semester.period': '6 months · one-time',
-    'pricing.semester.f1': 'Everything in Starter for one semester',
-    'pricing.semester.f2': 'Best value for a single term',
-    'pricing.semester.f3': 'Access to Memory with fast responses & super-fast task execution',
-    'pricing.semester.cta': 'Choose Semester',
-    'pricing.annual.name': 'Annual',
-    'pricing.annual.period': 'full academic year',
-    'pricing.annual.f1': 'Two semesters covered',
-    'pricing.annual.f2': 'Priority processing',
-    'pricing.annual.f3': 'Access to Memory with fast responses & super-fast task execution',
-    'pricing.annual.cta': 'Choose Annual',
-    'faq.title': 'Frequently asked questions',
-    'faq.q1': 'Which platforms does it work on?',
-    'faq.a1': 'Chaoxing, Yuketang and other Chinese educational platforms. New platforms are added regularly.',
-    'faq.q2': 'Are my credentials secure?',
-    'faq.a2': 'Your credentials are stored locally on your machine. zimzamzum never shares them with third parties.',
-    'faq.q3': 'How does the free trial work?',
-    'faq.a3': 'Every new account gets 1 day of full access to all features, no credit card required.',
-    'faq.q4': 'Can I stop a running task?',
-    'faq.a4': 'Yes. You stay in full control — you can pause or cancel any task at any time.',
-    'cta.title': 'Ready to never miss a deadline again?',
-    'cta.sub': 'Download zimzamzum and start your 1-day free trial.',
-    'footer.terms': 'Terms of Service',
-    'footer.privacy': 'Privacy Policy',
-    'footer.wechat': 'WeChat: zimzamzum',
-    'footer.copy': '© 2026 zimzamzum. All rights reserved.'
-  },
-  zh: {
-    'meta.title': 'zimzamzum — 智能作业助手',
-    'meta.description': 'zimzamzum 自动完成您的作业，帮助您永不错过截止日期。',
-    'nav.features': '功能',
-    'nav.how': '使用方法',
-    'nav.pricing': '价格',
-    'nav.faq': '常见问题',
-    'nav.download': '下载',
-    'hero.pill': '支持超星、雨课堂等平台 →',
-    'hero.title': 'AI 助力您的<br>大学作业',
-    'hero.sub': 'zimzamzum 是智能助手，跟踪截止日期、自动完成作业，并在教育平台上提交。',
-    'hero.downloadMac': '下载 Mac 版',
-    'hero.downloadWin': '下载 Windows 版',
-    'mockup.label1': '您描述任务',
-    'mockup.label2': 'zimzamzum 为您工作',
-    'mockup.nav1': '新任务',
-    'mockup.nav2': '自动化',
-    'mockup.nav3': '日程',
-    'mockup.nav4': '最近任务',
-    'mockup.nav5': '进行中…',
-    'mockup.title': '开始新任务',
-    'mockup.task': '在周五前自动完成雨课堂上的问答作业',
-    'mockup.tag1': '后台',
-    'mockup.tag2': '深度思考',
-    'mockup.sug1': '跟踪截止日期',
-    'mockup.sug2': '提交作业',
-    'mockup.status': '任务进行中 — 雨课堂问答',
-    'mockup.log1': '正在连接雨课堂…',
-    'mockup.log2': '已连接',
-    'mockup.log3': '已分析 12 道题目',
-    'mockup.log4': '正在撰写答案…',
-    'features.title': '您需要的一切',
-    'features.sub': '为您的学习生活提供全面辅助。',
-    'features.f1.title': '截止日期跟踪',
-    'features.f1.desc': '永不错过截止日期。zimzamzum 监控所有课程。',
-    'features.f2.title': '自动化',
-    'features.f2.desc': '为每周重复的任务创建可复用的工作流。',
-    'features.f3.title': '教育平台',
-    'features.f3.desc': '超星、雨课堂等 — 一键连接您的账户。',
-    'features.f4.title': '后台模式',
-    'features.f4.desc': 'AI 在您做其他事情时工作。您始终掌控一切。',
-    'features.f5.title': '深度思考模式',
-    'features.f5.desc': '对于复杂作业，AI 会在行动前仔细分析。',
-    'features.f6.title': '日程安排',
-    'features.f6.desc': '安排自动化任务每日或每周自动运行。',
-    'pricing.title': '简单定价',
-    'pricing.sub': '每个新账户均享 1 天免费试用。',
-    'pricing.popular': '热门',
-    'pricing.free.name': '免费',
-    'pricing.free.period': '1 天完整试用',
-    'pricing.free.f1': '访问所有功能',
-    'pricing.free.f2': '无需信用卡',
-    'pricing.free.f3': '包含记忆功能，响应和任务执行较慢',
-    'pricing.free.cta': '立即开始',
-    'pricing.starter.period': '每月',
-    'pricing.starter.f1': '无限访问',
-    'pricing.starter.f2': '作业自动完成并提交',
-    'pricing.starter.f3': '优先支持',
-    'pricing.starter.f4': '包含记忆功能，快速响应和极速任务执行',
-    'pricing.starter.cta': '选择 Starter',
-    'pricing.semester.name': '学期',
-    'pricing.semester.period': '6 个月 · 一次性付款',
-    'pricing.semester.f1': '一个学期内享 Starter 全部功能',
-    'pricing.semester.f2': '单学期最佳选择',
-    'pricing.semester.f3': '包含记忆功能，快速响应和极速任务执行',
-    'pricing.semester.cta': '选择学期版',
-    'pricing.annual.name': '年度',
-    'pricing.annual.period': '完整学年',
-    'pricing.annual.f1': '覆盖两个学期',
-    'pricing.annual.f2': '优先处理',
-    'pricing.annual.f3': '包含记忆功能，快速响应和极速任务执行',
-    'pricing.annual.cta': '选择年度版',
-    'faq.title': '常见问题',
-    'faq.q1': '支持哪些平台？',
-    'faq.a1': '超星、雨课堂及其他中国教育平台。新平台持续添加中。',
-    'faq.q2': '我的凭证安全吗？',
-    'faq.a2': '您的凭证存储在本地机器上。zimzamzum 绝不会与第三方共享。',
-    'faq.q3': '免费试用如何运作？',
-    'faq.a3': '每个新账户均可获得 1 天全功能访问，无需信用卡。',
-    'faq.q4': '可以停止正在运行的任务吗？',
-    'faq.a4': '可以。您完全掌控 — 随时暂停或取消任何任务。',
-    'cta.title': '准备好永不错过截止日期了吗？',
-    'cta.sub': '下载 zimzamzum，开始 1 天免费试用。',
-    'footer.terms': '服务条款',
-    'footer.privacy': '隐私政策',
-    'footer.wechat': '微信: zimzamzum',
-    'footer.copy': '© 2026 zimzamzum. 保留所有权利。'
+:root {
+  --bg: #0a0a0f;
+  --bg-alt: #1a1a1a;
+  --surface: #2b2b2b;
+  --sidebar: #121212;
+  --accent: #2135ad;
+  --accent-hover: #2a42c4;
+  --accent-glow: rgba(33, 53, 173, 0.35);
+  --cyan: #0096ff;
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.65);
+  --text-dim: rgba(255, 255, 255, 0.4);
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --max-width: 1100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Header ── */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.lang-switch {
+  display: flex;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn:hover {
+  color: var(--text-muted);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 0 24px var(--accent-glow);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+
+.btn-outline:hover {
+  background: rgba(33, 53, 173, 0.1);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 15px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #000000;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+/* ── Hero ── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 140px 24px 80px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  transition: all 0.2s;
+}
+
+.pill:hover {
+  color: var(--text);
+  background: rgba(33, 53, 173, 0.08);
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--text-muted);
+  max-width: 560px;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── Mockups ── */
+.mockups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px 100px;
+}
+
+.mockup-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mockup-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center;
+}
+
+.mockup-window {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.mockup-bar {
+  display: flex;
+  gap: 6px;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid var(--border);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f57; }
+.dot.yellow { background: #febc2e; }
+.dot.green { background: #28c840; }
+
+.mockup-body {
+  display: flex;
+  min-height: 280px;
+}
+
+.mock-sidebar {
+  width: 130px;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  padding: 16px 10px;
+  flex-shrink: 0;
+}
+
+.mock-sidebar-logo {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding: 0 6px;
+}
+
+.mock-nav-item {
+  font-size: 11px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.mock-nav-item.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.mock-main {
+  flex: 1;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mock-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.mock-card {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mock-card p {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.mock-tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.mock-tags span {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(33, 53, 173, 0.25);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(33, 53, 173, 0.4);
+}
+
+.mock-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mock-suggestions span {
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mock-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.mock-log {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.log-line {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-family: ui-monospace, 'Consolas', monospace;
+}
+
+.log-line.done { color: rgba(75, 181, 67, 0.85); }
+.log-line.active { color: var(--cyan); }
+
+.log-time {
+  color: var(--text-dim);
+  margin-right: 6px;
+}
+
+/* ── Sections ── */
+.features,
+.pricing,
+.faq,
+.download-cta {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.features h2,
+.pricing h2,
+.faq h2,
+.download-cta h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 48px;
+}
+
+/* ── Features grid ── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.feature-card:hover {
+  border-color: rgba(33, 53, 173, 0.4);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Pricing ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: left;
+}
+
+.price-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s;
+}
+
+.price-card:hover {
+  transform: translateY(-3px);
+}
+
+.price-card.featured {
+  border-color: var(--accent);
+  background: rgba(33, 53, 173, 0.08);
+}
+
+.price-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.price-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.price-period {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.price-card ul {
+  list-style: none;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.price-card li {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 5px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.price-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 11px;
+}
+
+/* ── FAQ ── */
+.faq-list {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+.faq-item summary {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 20px;
+  color: var(--text-dim);
+  transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ── Download CTA ── */
+.download-cta {
+  background: rgba(33, 53, 173, 0.06);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  max-width: 100%;
+}
+
+.download-cta p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 40px 24px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.footer-links a,
+.footer-wechat {
+  font-size: 13px;
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--text-muted);
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .nav { display: none; }
+
+  .mockups {
+    grid-template-columns: 1fr;
   }
-};
 
-function getNestedValue(obj, key) {
-  return obj[key];
-}
-
-function setLanguage(lang) {
-  if (!translations[lang]) lang = 'en';
-  var strings = translations[lang];
-
-  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-
-  document.querySelectorAll('[data-i18n]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n');
-    if (strings[key] !== undefined) {
-      el.textContent = strings[key];
-    }
-  });
-
-  document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n-html');
-    if (strings[key] !== undefined) {
-      el.innerHTML = strings[key];
-    }
-  });
-
-  document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
-    var spec = el.getAttribute('data-i18n-attr');
-    var parts = spec.split(':');
-    var attr = parts[0];
-    var key = parts[1];
-    if (strings[key] !== undefined) {
-      el.setAttribute(attr, strings[key]);
-    }
-  });
-
-  document.querySelectorAll('.lang-btn').forEach(function (btn) {
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-  });
-
-  localStorage.setItem(LANG_KEY, lang);
-}
-
-function detectLanguage() {
-  var saved = localStorage.getItem(LANG_KEY);
-  if (saved && translations[saved]) return saved;
-  var browser = (navigator.language || 'en').toLowerCase();
-  if (browser.startsWith('zh')) return 'zh';
-  return 'en';
-}
-
-// Init language
-setLanguage(detectLanguage());
-
-document.querySelectorAll('.lang-btn').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    setLanguage(btn.getAttribute('data-lang'));
-  });
-});
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    var target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-// Header shadow on scroll
-var header = document.querySelector('.header');
-window.addEventListener('scroll', function () {
-  if (window.scrollY > 20) {
-    header.style.boxShadow = '0 4px 24px rgba(0,0,0,0.4)';
-  } else {
-    header.style.boxShadow = 'none';
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
   }
-});
+
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 14px 16px;
+  }
+
+  .header-actions .btn {
+    display: none;
+  }
+
+  .lang-switch {
+    flex-shrink: 0;
+  }
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .features-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-lg {
+    width: 100%;
+  }
+}
