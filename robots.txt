@@ -1,0 +1,35 @@
+# zimzamzum — robots.txt
+# https://zimzamzum.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Crawl-delay: be respectful, wait 1 second between requests
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://zimzamzum.com/sitemap.xml
+
+# Block common non-content paths (if they exist in the future)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Allow search engines to index everything else
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Sogou News Spider
+Allow: /
+
+User-agent: *
+Allow: /

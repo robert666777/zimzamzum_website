@@ -1,15 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Canonical & Alternate (hreflang) -->
+  <link rel="canonical" href="https://zimzamzum.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://zimzamzum.com/zh.html">
+  <link rel="alternate" hreflang="en" href="https://zimzamzum.com/">
+  <link rel="alternate" hreflang="x-default" href="https://zimzamzum.com/">
+
+  <!-- Primary Meta -->
   <title data-i18n="meta.title">zimzamzum — AI for Your Assignments</title>
-  <meta name="description" data-i18n-attr="content:meta.description" content="zimzamzum automates your assignments and helps you never miss a deadline.">
-  <link rel="icon" href="assets/favicon.ico">
+  <meta name="description" data-i18n-attr="content:meta.description" content="zimzamzum automates your assignments, tracks deadlines, completes homework on Chaoxing and Yuketang, and submits them automatically. Free to start.">
+  <meta name="keywords" content="AI homework helper, assignment automation, Chaoxing auto-complete, Yuketang homework solver, AI deadline tracker, study assistant, AI for students, 在线作业助手, 超星自动完成, 雨课堂作业助手, AI学习助手, 作业自动提交, 智能学习工具">
+  <meta name="author" content="zimzamzum">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="baiduspider" content="index, follow">
+  <meta name="subject" content="AI-powered assignment automation and deadline tracking for students">
+  <meta name="theme-color" content="#6C63FF">
+
+  <!-- Open Graph (Facebook / LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zimzamzum.com/">
+  <meta property="og:site_name" content="zimzamzum">
+  <meta property="og:title" content="zimzamzum — AI for Your Assignments | Homework Automation">
+  <meta property="og:description" content="AI that tracks your deadlines, completes assignments on Chaoxing, Yuketang & more, and submits them automatically. Free to start.">
+  <meta property="og:image" content="https://zimzamzum.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://zimzamzum.com/">
+  <meta name="twitter:title" content="zimzamzum — AI for Your Assignments | Homework Automation">
+  <meta name="twitter:description" content="AI that tracks your deadlines, completes assignments on Chaoxing, Yuketang & more, and submits them automatically. Free to start.">
+  <meta name="twitter:image" content="https://zimzamzum.com/assets/og-image.png">
+
+  <!-- Bing Webmaster -->
+  <meta name="msvalidate.01" content="">
+  <!-- Baidu Tongji (replace YOUR_BAIDU_ID with your actual Baidu Tongji ID) -->
+  <meta name="baidu-site-verification" content="">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "zimzamzum",
+    "alternateName": ["智能作业助手", "AI学习助手"],
+    "url": "https://zimzamzum.com",
+    "description": "AI-powered homework automation and deadline tracking tool. Completes assignments on Chaoxing, Yuketang and other Chinese educational platforms, and submits them automatically.",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "Windows",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "399",
+      "priceCurrency": "CNY",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free Forever",
+          "price": "0",
+          "priceCurrency": "CNY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Starter",
+          "price": "49",
+          "priceCurrency": "CNY",
+          "billingIncrement": "P1M"
+        },
+        {
+          "@type": "Offer",
+          "name": "Semester",
+          "price": "199",
+          "priceCurrency": "CNY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Annual",
+          "price": "399",
+          "priceCurrency": "CNY"
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1247"
+    },
+    "screenshot": "https://zimzamzum.com/assets/screenshot.png",
+    "downloadUrl": "https://zimzamzum.com/ZimZamZum%20Setup%201.5.5.exe"
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I write a good prompt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Be precise. Instead of 'do my homework,' try: 'Log into my (Chaoxing, Yuketang, etc.) account, click on the homework section, open the assignment called Assignment 6, analyze it, complete it, and submit it.' The more detail you give, the better the AI performs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which platforms does it work on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Chaoxing, Yuketang and other Chinese educational platforms. You can also add your own platforms. Credentials are securely stored so you don't have to enter them every time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my credentials secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your credentials are stored locally on your machine. zimzamzum never shares them with third parties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I create multiple accounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can create multiple accounts. However, if you're on the Free plan, all accounts share the same credits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the payment methods?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alipay and WeChat Pay are the accepted payment methods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I stop a running task?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You stay in full control — you can pause or cancel any task at any time."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "zimzamzum",
+    "url": "https://zimzamzum.com",
+    "logo": "https://zimzamzum.com/assets/logo.png",
+    "sameAs": [
+      "https://github.com/robert666777/zimzamzum_website"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "availableLanguage": ["English", "Chinese"]
+    }
+  }
+  </script>
 </head>
 <body>
 
