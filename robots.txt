@@ -1,5 +1,5 @@
 # zimzamzum — robots.txt
-# https://zimzamzum.com/robots.txt
+# https://zimzamzum.online/robots.txt
 
 User-agent: *
 Allow: /
@@ -8,7 +8,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://zimzamzum.com/sitemap.xml
+Sitemap: https://zimzamzum.online/sitemap.xml
 
 # Block common non-content paths (if they exist in the future)
 Disallow: /api/
