@@ -10,7 +10,7 @@ var translations = {
     'nav.faq': 'FAQ',
     'nav.download': 'Download',
     'hero.pill': 'Works with Chaoxing, Yuketang & more →',
-    'hero.title': 'AI for your<br>assignments',
+    'hero.title': 'AI Homework<br>Helper',
     'hero.sub': 'zimzamzum is the AI assistant that tracks your deadlines, completes your assignments, and submits them automatically on your educational platforms — and more.',
     'hero.downloadMac': 'Download for Mac',
     'hero.downloadWin': 'Download for Windows',
