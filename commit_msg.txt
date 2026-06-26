@@ -1,14 +1,1 @@
-Restructure site: Chinese main page, English at en.html, homework terminology
-
-- index.html now contains Chinese content (main page for Chinese users)
-- Added en.html as English version
-- Removed zh.html (consolidated into index.html)
-- Fixed navbar download button to trigger actual file download
-- Removed "for University Students" everywhere, use "zimzamzum - AI Homework Helper"
-- Changed "AI for your assignments" to "AI that does your homeworks"
-- Replaced all "assignment" with "homework" in English
-- Fixed lang="cn" (not zh-CN) in Chinese pages
-- Fixed hreflang to "cn" for Chinese
-- Updated Chinese keywords for SEO
-- Added overflow-x:hidden to fix mobile purple bar
-- Updated sitemap, script.js, og-image text, and all meta tags
+Regenerate OG image with updated text: AI that does your homeworks
