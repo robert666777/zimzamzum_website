@@ -10,7 +10,7 @@ var translations = {
     'nav.faq': 'FAQ',
     'nav.download': 'Download',
     'hero.pill': 'Works with Chaoxing, Yuketang & more \u2192',
-    'hero.title': 'zimzamzum<br>AI Homework Helper',
+    'hero.title': 'The AI That Does Your Homework',
     'hero.sub': 'zimzamzum is the AI assistant that tracks your deadlines, completes your homework, and submits them automatically on your educational platforms \u2014 and more.',
     'hero.downloadMac': 'Download for Mac',
     'hero.downloadWin': 'Download for Windows',
@@ -109,7 +109,7 @@ var translations = {
     'nav.faq': '\u5e38\u89c1\u95ee\u9898',
     'nav.download': '\u4e0b\u8f7d',
     'hero.pill': '\u652f\u6301\u8d85\u661f\u3001\u96e8\u8bfe\u5802\u7b49\u5e73\u53f0 \u2192',
-    'hero.title': 'zimzamzum<br>AI \u4f5c\u4e1a\u5e06\u624b',
+    'hero.title': 'AI \u4f5c\u4e1a\u5e06\u624b',
     'hero.sub': 'zimzamzum \u662f\u60a8\u7684 AI \u4f5c\u4e1a\u5e06\u624b\uff0c\u8ddf\u8e2a\u622a\u6b62\u65e5\u671f\u3001\u5728\u8d85\u661f\u548c\u96e8\u8bfe\u5802\u7b49\u5e73\u53f0\u4e0a\u81ea\u52a8\u5b8c\u6210\u4f5c\u4e1a\u5e76\u63d0\u4ea4\u2014\u2014\u4e00\u952e\u6319\u5b9a\u3002',
     'hero.downloadMac': '\u4e0b\u8f7d Mac \u7248',
     'hero.downloadWin': '\u4e0b\u8f7d Windows \u7248',
@@ -245,9 +245,9 @@ function setLanguage(lang) {
 function detectLanguage() {
   var saved = localStorage.getItem(LANG_KEY);
   if (saved && translations[saved]) return saved;
-  var browser = (navigator.language || 'zh').toLowerCase();
-  if (!browser.startsWith('en')) return 'zh';
-  return 'en';
+  var pathname = window.location.pathname;
+  if (pathname.indexOf('en.html') !== -1) return 'en';
+  return 'zh';
 }
 
 // Init language
