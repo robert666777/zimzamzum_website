@@ -65,12 +65,12 @@ draw.polygon(hex_points, fill=PURPLE, outline=PURPLE)
 draw.text((95, 30), badge_text, fill=LIGHT_PURPLE, font=badge_font)
 
 # Main title
-title = "AI for Your"
+title = "AI that does"
 bbox = draw.textbbox((0, 0), title, font=title_font)
 tw = bbox[2] - bbox[0]
 draw.text(((W - tw) // 2, 160), title, fill=WHITE, font=title_font)
 
-title2 = "Assignments"
+title2 = "your homeworks"
 bbox2 = draw.textbbox((0, 0), title2, font=title_font)
 tw2 = bbox2[2] - bbox2[0]
 draw.text(((W - tw2) // 2, 260), title2, fill=PURPLE, font=title_font)
